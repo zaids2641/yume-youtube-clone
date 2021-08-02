@@ -13,28 +13,10 @@ function toggleMenu() {
         activeMenu.style.display = "none";
     } else {
         activeMenu.style.display = "block";
-        sideMenuPanelMenu.style.width = "10.2rem";
-    }
-  }
-
-// Toggle Left Menu Main
-function viewToggleMenu() {
-    var sideMenu = document.getElementById("collapse-menu");
-    var sideMenuPanelMenu = document.getElementById("side-menu");
-    var activeMenu = document.getElementById("active-menu");
-    if (sideMenu.style.display === "none") {
-        sideMenu.style.display = "block";
-        sideMenuPanelMenu.style.width = "28rem";
-    } else {
-        sideMenu.style.display = "none";
-    }
-    if (activeMenu.style.display === "block") {
-        activeMenu.style.display = "none";
-    } else {
-        activeMenu.style.display = "block";
         sideMenuPanelMenu.style.width = "0";
     }
   }
+
 
 
 // Toggle Search
@@ -72,10 +54,10 @@ var player = videojs('my-video', {
   });
 
 
-// Limit Characters
+// Limit Description Characters
 $(document).ready(function(){
-  var x = document.getElementById("toggle_height");
-  $("#toggle_height").click(function(){
+  var x = document.getElementById("toggle_description");
+  $("#toggle_description").click(function(){
      $(".toggleHeight").toggleClass("toggleDetails");
      
   if (x.innerHTML === "Show More") {
@@ -86,4 +68,69 @@ $(document).ready(function(){
   });
 });
 
+// Limit Reply Characters
+$(document).ready(function(){
+  var x = document.getElementById("toggle_reply");
+  $("#toggle_reply").click(function(){
+     $(".toggleHeight").toggleClass("toggleDetails");
+     
+  if (x.innerHTML === "Show More") {
+    x.innerHTML = "Show Less";
+  } else {
+    x.innerHTML = "Show More";
+  }
+  });
+});
 
+function toggle(){ 
+  var text = document.querySelector('#reply_comment').innerText;
+  var textLength = text.length;
+  var textLimit = '120'
+  
+  if (textLength > textLimit) {
+    document.getElementById('toggle_reply').classList.add('showButton')
+  }
+  else {
+    document.getElementById('toggle_reply').classList.add('hideButton')
+  }
+  };
+
+
+// Enable Disable Button in Textarea
+function checkfTextArea() {
+  var textArea = document.getElementById("textArea");
+  if(textArea.value==="") { 
+           document.getElementById('formButtons').classList.add('formButtons');
+       } else { 
+           document.getElementById('formButtons').classList.remove('formButtons');
+       }
+   }
+
+
+// Multitab Header
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+// Clear textarea Field
+// function eraseText() {
+//   var cl = document.getElementById("textArea").value = ' ';
+//   if (cl.value===' '){
+//  document.getElementById('formButtons').classList.add('formButtons');
+// }
+// console.log(cl)
+// }

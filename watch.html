@@ -34,7 +34,7 @@
                 <button class="toggle-button toggle-side-menu" onClick="toggleMenu()">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
-                <a href="#"><span class="logo">YuMe</span></a>
+                <a href="/index.html"><span class="logo">YuMe</span></a>
             </div>
 
             <div class="nav-search">
@@ -96,7 +96,9 @@
                 </span>
                 <span>
                     <div class="user-profile">
-                        <img src="/images/user.jpg" width="100%" alt="user">
+                        <a href="/channel.html">
+                            <img src="/images/user.jpg" width="100%" alt="user">
+                        </a>
                     </div>
                 </span>
             </div>
@@ -503,10 +505,14 @@
                             <div class="channel">
                                 <div class="user-info">
                                     <div class="channel-logo">
-                                        <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+                                        <a href="/channel.html">
+                                            <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+                                        </a>
                                     </div>
                                     <div class="channel-name">
-                                        <h4>Rebeca MAcoy</h4>
+                                        <a href="/channel.html">
+                                            <h4>Rebeca MAcoy</h4>
+                                        </a>
                                         <small>2K subscribers</small>
                                         <div class="left-status">
                                             <small class="publish-date">Premiered Nov 11, 2019</small>
@@ -553,7 +559,7 @@
 
                                 To disable the Authenticator, Select the "NO" radio button and click Save Settings.
                             </p>
-                            <button class="showMoreLess" id="toggle_height" onClick="toggleText()">Show More</button>
+                            <button class="showMoreLess" id="toggle_description">Show More</button>
                         </div>
                         <!-- Video Details Ends -->
 
@@ -570,15 +576,17 @@
 
                             <div class="postcomment">                                
                                 <div class="user-profile">
-                                    <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+                                    <a href="/channel.html">
+                                        <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+                                    </a>
                                 </div>
                                 <div class="form">
                                     <form action="" class="public-comment">
-                                        <textarea class="comment" name="comment" placeholder="Add a public comment.."></textarea>
-                                        <div class="buttons">
-                                            <button>
+                                        <textarea class="comment" id="textArea" onkeyup="checkfTextArea()" name="comment" placeholder="Add a public comment.."></textarea>
+                                        <div class="buttons formButtons" id="formButtons">
+                                            <a class="cancel-button" onclick="reset();">
                                                 Cancel
-                                            </button>
+                                            </a>
                                             <button>
                                                 Comment
                                             </button>
@@ -594,15 +602,47 @@
                                 <div class="main-comment">                                    
                                     <div class="public-comment">
                                         <div class="user-profile">
-                                            <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+					                        <a href="/channel.html">
+                                                <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+					                        </a>
                                         </div>
                                         <div class="date-comment">
-                                            <span class="username">Somewhere Somehow</span><span class="date-commented">3 days ago</span>
+					                        <a href="/channel.html">
+                                                <span class="username">Somewhere Somehow</span>
+                                            </a>
+                                            <span class="date-commented">3 days ago</span>
                                         </div>
                                     </div>
                                     <div class="user-comment">
                                         <p>
-                                            The Security Key Authenticator is the six (6) digit number shown on the downloadable security application that will be used to authenticate the user on every login.
+                                            Comment 1. The Security Key Authenticator is the six (6) digit number shown on the downloadable security application that will be used to authenticate the user on every login. Each number is randomly generated and unique that is valid only within 1 hour after the key is generated. The generated code has to be entered before logging in.
+
+
+                                            The Security Key Authenticator can be downloaded on a PC or an android device. You will need to pair first the serial number displayed on the App to your account located on the secure button/link after successful login on your account.
+
+
+                                            To use and activate these feature do the following:
+
+                                            STEP 1 : Download the Authenticator (PC or Android).
+                                                            Download HERE and install for Windows XP.
+                                                            Download HERE for Windows 7 or higher.
+                                                            Download HERE for Android 2.3 to 4.4.
+
+                                            STEP 2 : Logon to your LoadCentral account using webtool (www.loadcentral.net)
+
+                                            STEP 3 : Click Security Button/ Security Key Link.
+
+                                            STEP 4 : Click on "YES" on the type you wish to activate.
+
+                                            STEP 5 : Type the Serial Number shown on the Authenticator App (ex. AB12345678) on the corresponding text box
+
+                                            STEP 6 : Click Save Settings.
+
+
+                                            The next time you login, you need to generate code on the Authenticator App and type it on the Security Key Field.
+
+
+                                            To disable the Authenticator, Select the "NO" radio button and click Save Settings.
                                         </p>
                                         <div class="reacts">
                                             <div class="react-icons">
@@ -628,38 +668,142 @@
                                     </div>
 
                                     <!-- Reply Comment -->
-                                    <div class="reply-comment">                                    
-                                        <div class="public-comment">
-                                            <div class="user-profile">
-                                                <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+                                    <div class="user-reply">
+                                        <div class="reply-comment">                                    
+                                            <div class="public-comment">
+                                                <div class="user-profile">
+                                                    <a href="/channel.html">
+                                                        <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="date-comment">
+                                                    <a href="/channel.html">
+                                                        <span class="username">Somewhere Somehow</span>
+                                                    </a>
+                                                    <span class="date-commented">3 days ago</span>
+                                                </div>
                                             </div>
-                                            <div class="date-comment">
-                                                <span class="username">Somewhere Somehow</span><span class="date-commented">3 days ago</span>
+                                            <div class="user-comment">
+                                                <p>
+                                                    Reply 2. The Security Key Authenticator is the six (6) digit number shown on the downloadable security application that will be used to authenticate the user on every login.
+                                                    STEP 2 : Logon to your LoadCentral account using webtool (www.loadcentral.net)
+
+                                                    STEP 3 : Click Security Button/ Security Key Link.
+
+                                                    STEP 4 : Click on "YES" on the type you wish to activate.
+
+                                                    STEP 5 : Type the Serial Number shown on the Authenticator App (ex. AB12345678) on the corresponding text box
+
+                                                    STEP 6 : Click Save Settings.
+
+
+                                                    The next time you login, you need to generate code on the Authenticator App and type it on the Security Key Field.
+
+
+                                                    To disable the Authenticator, Select the "NO" radio button and click Save Settings.
+                                                </p>
+                                                <div class="reacts">
+                                                    <div class="react-icons">
+                                                        <button class="like-button" title="I like this">
+                                                            <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                                <g>
+                                                                    <path class="fx-3" d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"></path>
+                                                                </g>
+                                                            </svg>
+                                                            <span>284</span>
+                                                        </button>
+                                                        <button class="dislike-button" title="I dislike this">
+                                                            <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                                <g>
+                                                                    <path class="fx-3" d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path>
+                                                                </g>
+                                                            </svg>
+                                                            <span>9</span>
+                                                        </button>
+                                                        <buton class="reply-button">Reply</buton>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="user-comment">
-                                            <p>
-                                                The Security Key Authenticator is the six (6) digit number shown on the downloadable security application that will be used to authenticate the user on every login.
-                                            </p>
-                                            <div class="reacts">
-                                                <div class="react-icons">
-                                                    <button class="like-button" title="I like this">
-                                                        <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
-                                                            <g>
-                                                                <path class="fx-3" d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"></path>
-                                                            </g>
-                                                        </svg>
-                                                        <span>284</span>
-                                                    </button>
-                                                    <button class="dislike-button" title="I dislike this">
-                                                        <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
-                                                            <g>
-                                                                <path class="fx-3" d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path>
-                                                            </g>
-                                                        </svg>
-                                                        <span>9</span>
-                                                    </button>
-                                                    <buton class="reply-button">Reply</buton>
+                                        <div class="reply-comment">                                    
+                                            <div class="public-comment">
+                                                <div class="user-profile">
+                                                    <a href="/channel.html">
+                                                        <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="date-comment">
+                                                    <a href="/channel.html">
+                                                        <span class="username">Somewhere Somehow</span>
+                                                    </a>
+                                                    <span class="date-commented">3 days ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="user-comment">
+                                                <p>
+                                                    The Security Key Authenticator is the six (6) digit number shown on the downloadable security application that will be used to authenticate the user on every login.
+                                                </p>
+                                                <div class="reacts">
+                                                    <div class="react-icons">
+                                                        <button class="like-button" title="I like this">
+                                                            <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                                <g>
+                                                                    <path class="fx-3" d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"></path>
+                                                                </g>
+                                                            </svg>
+                                                            <span>284</span>
+                                                        </button>
+                                                        <button class="dislike-button" title="I dislike this">
+                                                            <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                                <g>
+                                                                    <path class="fx-3" d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path>
+                                                                </g>
+                                                            </svg>
+                                                            <span>9</span>
+                                                        </button>
+                                                        <buton class="reply-button">Reply</buton>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reply-comment">                                    
+                                            <div class="public-comment">
+                                                <div class="user-profile">
+                                                    <a href="/channel.html">
+                                                        <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="date-comment">
+                                                    <a href="/channel.html">
+                                                        <span class="username">Somewhere Somehow</span>
+                                                    </a>
+                                                    <span class="date-commented">3 days ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="user-comment">
+                                                <p>
+                                                    The Security Key Authenticator is the six (6) digit number shown on the downloadable security application that will be used to authenticate the user on every login.
+                                                </p>
+                                                <div class="reacts">
+                                                    <div class="react-icons">
+                                                        <button class="like-button" title="I like this">
+                                                            <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                                <g>
+                                                                    <path class="fx-3" d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"></path>
+                                                                </g>
+                                                            </svg>
+                                                            <span>284</span>
+                                                        </button>
+                                                        <button class="dislike-button" title="I dislike this">
+                                                            <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                                                <g>
+                                                                    <path class="fx-3" d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v1.91l.01.01L1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"></path>
+                                                                </g>
+                                                            </svg>
+                                                            <span>9</span>
+                                                        </button>
+                                                        <buton class="reply-button">Reply</buton>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -670,10 +814,15 @@
                                 <div class="main-comment">                                    
                                     <div class="public-comment">
                                         <div class="user-profile">
-                                            <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+					                        <a href="/channel.html">
+                                                <img src="/images/rebeca-monroy.PNG" width="100%" height="100%" alt="">
+					                        </a>
                                         </div>
                                         <div class="date-comment">
-                                            <span class="username">Somewhere Somehow</span><span class="date-commented">3 days ago</span>
+					                        <a href="/channel.html">
+                                                <span class="username">Somewhere Somehow</span>
+                                            </a>
+                                            <span class="date-commented">3 days ago</span>
                                         </div>
                                     </div>
                                     <div class="user-comment">

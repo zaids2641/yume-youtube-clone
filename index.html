@@ -22,7 +22,7 @@
                 <button class="toggle-button toggle-side-menu" onClick="toggleMenu()">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
-                <a href="#"><span class="logo">YuMe</span></a>
+                <a href="/index.html"><span class="logo">YuMe</span></a>
             </div>
 
             <div class="nav-search">
@@ -84,61 +84,19 @@
                 </span>
                 <span>
                     <div class="user-profile">
-                        <img src="/images/user.jpg" width="100%" alt="user">
+                        <a href="/channel.html">
+                            <img src="/images/user.jpg" width="100%" alt="user">
+                        </a>
                     </div>
                 </span>
             </div>
         </nav>       
     </header>
 
-    <main class="main">
-        <div class="left-menu" id="side-menu">
-            
-            <!-- Main Menu Starts -->
-            <div class="active-left-menu" id="active-menu">
-                <ul class="active-side-menu">
-                    <li class="active-side-menu-items active">
-                        <a href="#">
-                            <div class="svg">
-                                <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; ">
-                                    <g >
-                                        <path class="active" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8"></path>
-                                    </g>
-                                </svg>
-                            </div>                            
-                            <span >Home</span>
-                        </a>
-                    </li>
-                    <li class="active-side-menu-items">
-                        <a href="#">
-                            <div class="svg">
-                                <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; ">
-                                    <g>
-                                        <path d="M11.23 13.08c-.29-.21-.48-.51-.54-.86-.06-.35.02-.71.23-.99.21-.29.51-.48.86-.54.35-.06.7.02.99.23.29.21.48.51.54.86.06.35-.02.71-.23.99a1.327 1.327 0 01-1.08.56c-.28 0-.55-.08-.77-.25zM22 12c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10zm-3.97-6.03L9.8 9.8l-3.83 8.23 8.23-3.83 3.83-8.23z" ></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <span>Explore</span>
-                        </a>
-                    </li>
-                    <li class="active-side-menu-items">
-                        <a href="#">
-                            <div class="svg">
-                                <svg viewBox="0 0 24 24" focusable="false" style="pointer-events: none; display: block; ">
-                                    <g>
-                                        <path d="M18.7 8.7H5.3V7h13.4v1.7zm-1.7-5H7v1.6h10V3.7zm3.3 8.3v6.7c0 1-.7 1.6-1.6 1.6H5.3c-1 0-1.6-.7-1.6-1.6V12c0-1 .7-1.7 1.6-1.7h13.4c1 0 1.6.8 1.6 1.7zm-5 3.3l-5-2.7V18l5-2.7z" ></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <span>Subscription</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>            
-            <!-- Main Menu Ends -->
+    <main class="main single-main">
 
             <!-- Collapsible Menu Starts -->
-            <div id="collapse-menu">
+            <div class="single-side-menu" id="collapse-menu" >
                 <div>
                     <ul class="side-menu">
                         <li class="side-menu-items">
@@ -444,7 +402,6 @@
             </div>
 
             <!-- Collapse Menu Ends -->
-        </div>
 
         <div class="main-content">
             <div class="category">
